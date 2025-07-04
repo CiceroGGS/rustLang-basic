@@ -4,6 +4,7 @@ fn soma_entre_valores(x: i32, y: i32) -> i32 {
     let resultado: i32 = x + y;
     resultado
 }
+
 fn subtracao_entre_valores(x: i32, y: i32) -> i32 {
     let resultado: i32 = x - y;
     resultado
@@ -77,8 +78,88 @@ fn menu() {
     }
 }
 
-static VARIAVEL_STATIC: i32 = 10;
+// static VARIAVEL_STATIC: i32 = 10;
+// const CONSTANTE: i32 = 20;
+
+// fn main() {
+//     menu()
+// }
+
+// fn main() {
+
+//     let x: i32 = 40;
+//     let mut y: i32 = x;
+
+//     println!("==========================");
+//     println!("O valor de x é: {} - referencia {:p}", x, &x);
+//     println!("O valor de y é: {} - refremcoa {:p}", y, &y);
+//     println!("==========================");
+
+//     y = 50;
+
+//     println!("==========================");
+//     println!("O valor de x é: {} - referencia {:p}", x, &x);
+//     println!("O valor de y é: {} - refremcoa {:p}", y, &y);
+//     println!("==========================");
+
+// }
+
+// fn main() {
+
+//     let x: i32 = 10;
+//     let y: &i32 = &x;
+
+//     println!("==========================");
+//     println!("O valor de x é: {} - referencia {:p}", x, &x);
+//     println!("O valor de y é: {} - refremcoa", y);
+//     println!("==========================");
+
+// }
+// fn main() {
+//     // Declarando uma variável inteira x
+//     let x: i32 = 10;
+
+//     // Criando uma referência para x
+//     let y: &i32 = &x; 
+
+//     println!("O valor de x é: {} - endereço de x: {:p}", x, &x);
+//     println!("O valor de y (referência para x) é: {} - endereço de y: {:p}", y, &y);
+
+//     // Criando uma nova referência t, que aponta para o mesmo valor que y (ou seja, x)
+//     let t: &i32 = y;
+
+//     println!("O valor de t (referência para x via y) é: {} - endereço de t: {:p}", t, &t);
+
+//     // Desreferenciando y para obter o valor de x e armazenando em w
+//     let w: i32 = *y;
+
+//     println!("O valor de w (valor de x via desreferência de y) é: {} - endereço de w: {:p}", w, &w);
+// }
+
+
+// fn main() {
+//    let mut x: i32 = 10;
+//    let y: &i32 = &x; // Criando uma referência para x
+   
+//     println!("O valor de x é: {} - endereço de x: {:p}", x, &x);
+//     println!("O valor de y (referência para x) é: {} - endereço de y: {:p}", y, &y);
+
+//     x = 20; // Alterando o valor de x
+
+//     println!("Após alterar x:");
+//     println!("O valor de x é: {} - endereço de x: {:p}", x, &x);
+//     // println!("O valor de y (referência para x) ainda é: {} - endereço de y: {:p}", y, &y);
+
+// }
 
 fn main() {
-    menu()
+    let x:i32 = 10;
+    let y: &i32 = &x; // Criando uma referência para x
+
+    imprime_valor(&x);
+    imprime_valor(&y);
+}
+
+fn imprime_valor(valor: &i32) {
+    println!("O valor é: {} - endereço: {:p}", valor, valor);
 }
